@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from '../../assets/react.svg';
 
 interface ConnectFormProps {
   connectToVideo: (channelName :  string ) => void
@@ -6,6 +7,14 @@ interface ConnectFormProps {
 
 export const ConnectForm = ( {} ) : ConnectFormProps) => {
   const [channelName, setChannelName] = useState('');
+  const [invalidInputMsg, setInvalidInputMsg]  = useState('');
+
+
+  // if(trimmedChannelName === '') {
+  //   e.preventDefault();
+  //   const trimmedChannelName = channelName.trim();
+  //   setInvalidInputMsg()
+  // }
 
   return (
     <form>
@@ -20,6 +29,7 @@ export const ConnectForm = ( {} ) : ConnectFormProps) => {
             setChannelName(e.target.value);
           }}
         />
+
         <button> Connect </button>
       </div>
     </form>
