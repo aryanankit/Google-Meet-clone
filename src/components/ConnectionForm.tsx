@@ -10,12 +10,6 @@ export const ConnectForm = ( {} ) : ConnectFormProps) => {
   const [invalidInputMsg, setInvalidInputMsg]  = useState('');
 
 
-  // if(trimmedChannelName === '') {
-  //   e.preventDefault();
-  //   const trimmedChannelName = channelName.trim();
-  //   setInvalidInputMsg()
-  // }
-
   return (
     <form>
       <img src={logo} className="logo" alt="logo" />
