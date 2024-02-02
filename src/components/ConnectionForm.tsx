@@ -15,11 +15,10 @@ export const ConnectForm = ({ connectToVideo } : ConnectFormProps) => {
     // trim spaces
     const trimmedChannelName = channelName.trim()
     
-    // validate input: make sure channelName is not empty
     if (trimmedChannelName === '') {
-      e.preventDefault() // keep the page from reloading on form submission
+      e.preventDefault() 
       setInvalidInputMsg("Channel name can't be empty.") // show warning
-      setChannelName('') // resets channel name value in case user entered blank spaces 
+      setChannelName('') 
       return;
     } 
   
@@ -37,7 +36,7 @@ export const ConnectForm = ({ connectToVideo } : ConnectFormProps) => {
           value={channelName}
           onChange={(e) => {
             setChannelName(e.target.value)
-            setInvalidInputMsg('') // clear the error message
+            setInvalidInputMsg('')
           }}
         />
         <button>Connect</button>
