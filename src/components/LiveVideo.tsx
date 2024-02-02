@@ -16,16 +16,13 @@ import {
 export const LiveVideo = () => {
 
   const appId = 'Agora Project App ID'
-  const { channelName } = useParams() //pull the channel name from the param
+  const { channelName } = useParams() 
 
-  // set the connection state
   const [activeConnection, setActiveConnection] = useState(true);
 
-  // track the mic/video state - Turn on Mic and Camera On
   const [micOn, setMic] = useState(true);
   const [cameraOn, setCamera] = useState(true);
 
-  // get local video and mic tracks
   const { localMicrophoneTrack } = useLocalMicrophoneTrack(micOn);
   const { localCameraTrack } = useLocalCameraTrack(cameraOn);
 
