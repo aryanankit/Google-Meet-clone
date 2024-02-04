@@ -16,8 +16,7 @@ import {
 export const LiveVideo = () => {
 
   const appId = 'Agora Project App ID'
-  // const agoraEngine = useRTCClient( AgoraRTC.createClient({ codec: "vp8", mode: "rtc" })); // Initialize Agora Client
-  const { channelName } = useParams() //pull the channel name from the param
+  const { channelName } = useParams() 
 
   // set the connection state
   const [activeConnection, setActiveConnection] = useState(true);
