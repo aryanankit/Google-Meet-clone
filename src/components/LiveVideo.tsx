@@ -27,10 +27,8 @@ export const LiveVideo = () => {
   const { localMicrophoneTrack } = useLocalMicrophoneTrack(micOn);
   const { localCameraTrack } = useLocalCameraTrack(cameraOn);
 
-  // to leave the call
   const navigate = useNavigate()
 
-  // Join the channel
   useJoin(
     {
       appid: appId,
@@ -42,11 +40,9 @@ export const LiveVideo = () => {
 
   usePublish([localMicrophoneTrack, localCameraTrack]);
 
-  //remote users
   const remoteUsers = useRemoteUsers();
   const { audioTracks } = useRemoteAudioTracks(remoteUsers);
 
-  // play the remote user audio tracks
   audioTracks.forEach((track) => track.play());
 
 
