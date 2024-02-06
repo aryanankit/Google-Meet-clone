@@ -50,7 +50,6 @@ export const LiveVideo = () => {
     <>
       <div id='remoteVideoGrid'>
         { 
-          // Initialize each remote stream using RemoteUser component
           remoteUsers.map((user) => (
             <div key={user.uid} className="remote-video-container">
               <RemoteUser user={user} /> 
@@ -69,7 +68,6 @@ export const LiveVideo = () => {
           className=''
         />
         <div>
-          {/* media-controls toolbar component - UI controling mic, camera, & connection state  */}
           <div id="controlsToolbar">
             <div id="mediaControls">
               <button className="btn" onClick={() => setMic(a => !a)}>
