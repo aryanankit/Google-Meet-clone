@@ -4,7 +4,7 @@ import logo from './../assets/react.svg'
 interface ConnectFormProps {
   connectToVideo: (channelName: string) => void
 }
-
+// connection form
 export const ConnectForm = ({ connectToVideo } : ConnectFormProps) => {
 
   const [channelName, setChannelName] = useState('')
